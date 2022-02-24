@@ -13,7 +13,7 @@ class testRepoCommits(unittest.TestCase):
         self.assertEqual(type(getRepoNames("josedlc5")), list)
 
     def testRepoDict(self):
-        self.asserEqual(type(repoCommits("josedlc5")), dict)
+        self.assertEqual(type(repoCommits("josedlc5")), dict)
 
 
 if __name__ == '__main__':
