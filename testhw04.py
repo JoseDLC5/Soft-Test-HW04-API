@@ -14,3 +14,7 @@ class testRepoCommits(unittest.TestCase):
 
     def testRepoDict(self):
         self.asserEqual(type(repoCommits("josedlc5")), dict)
+
+
+if __name__ == '__main__':
+    unittest.main()
