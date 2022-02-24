@@ -6,7 +6,7 @@ import json
 
 def getRepoNames(id):
 
-    url = f"https://api.github.com/users/{id}/repos"
+    url = "https://api.github.com/users/" + str(id) + "/repos"
 
     # get json data for list of all user repos and their data
     jsonRepoList = requests.get(url)
@@ -28,9 +28,8 @@ def getRepoCommits(id, repoNameList):
 
     for repoName in repoNameList:
         jsonRepoCommits = requests.get(
-            f"https://api.github.com/repos/{id}/{repoName}/commits")
+            "https://api.github.com/repos/" + str(id) + "/" + str(repoName) + "/commits")
         repoCommits = jsonRepoCommits.json()
-        print(repoCommits)
         commitNum = len(repoCommits)
         repoCommitDict[repoName] = commitNum
 
