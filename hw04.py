@@ -40,7 +40,8 @@ def repoCommits(id):
     repoNameList = getRepoNames(id)
     repoDict = getRepoCommits(id, repoNameList)
     for repoName in repoDict:
-        print(f"Repo: {repoName} Number of commits: {repoDict[repoName]}")
+        print("Repo: " + str(repoName) +
+              " Number of commits: " + str(repoDict[repoName]))
     return repoDict
 
 
